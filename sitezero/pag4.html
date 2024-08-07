@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo</title>
+    <style>
+        body{
+            width: 100%;
+            padding: 30px;
+            background-color: bisque;
+        }
+        form{
+            text-align: left;
+        }
+    </style>
+</head>
+<script>
+    function calcula(){
+        // alert("entrou no cálculo");
+        const nt = [];
+        const ps = [];
+        for (let i = 0; i < 3; i++){
+            let k = i + 1;
+            nt[i] = parseFloat(document.getElementById(`n${k}`).value);
+            ps[i] = parseFloat(document.getElementById(`p${k}`).value);
+        }
+        let resultado = (nt[0] * ps[0] + nt[1] * ps[1] + nt[2] * ps[2]) / (ps[0] + ps[1] + ps[2]);
+//        alert(x +' + ' +  y + ' = ' + resultado);
+        const res = document.getElementById("res");
+        res.innerHTML = "a média é: " + parseFloat(resultado);
+    }
+</script>
+<body>
+    <h4>Cálculo</h4>
+    <br/><hr/><br/>
+    <h4>Entrada</h4>
+    <form action="#" onsubmit="return calcula()">
+        <label>Primeira nota:</label>
+        <input id="n1" type="number" value="1"/> <br/>
+        <label>Segunda nota:</label>
+        <input id="n2" type="number" value="1"/> <br/>
+        <label>Terceira nota:</label>
+        <input id="n3" type="number" value="1"/> <br/> <br/>
+        <label>Primeiro peso:</label>
+        <input id="p1" type="number" value="1"/> <br/>
+        <label>Segundo peso:</label>
+        <input id="p2" type="number" value="1"/> <br/>
+        <label>Terceiro peso:</label>
+        <input id="p3" type="number" value="1"/> <br/> <br/>
+        <input type="submit" value="Calcula"/>
+    </form>
+    <br/><hr/><br/>
+    <h4>Resultado</h4>
+    <p id="res"></p>
+    <br/><hr/><br/>
+</body>

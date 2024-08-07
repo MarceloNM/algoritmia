@@ -1,0 +1,20 @@
+
+body {
+    background-color: aquamarine;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.embaciado {
+    font-family: Arial, Helvetica, sans-serif;
+    color:lightsteelblue;
+    background: none;
+}
+
+.grande {
+    font-size: 18px;
+}
+
+
+.pequeno {
+    font-size: 16px;
+}
